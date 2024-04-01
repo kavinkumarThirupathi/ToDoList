@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title >ToDoList</title>
+    <link rel="icon" href="D:\ToDoList\img\OIP.jpg" >
+    <link rel="Stylesheet" href="D:\ToDoList\style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="Todo-app">
+            <h1>ToDoList <img src="img\OIP.jpg" alt=""></h1>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your Text">
+                <button onclick="add() ,clear()" >Add</button>
+            </div>
+            <ul id="List-Container" >
+                
+            </ul>
+            <script>
+                //Select the list
+                var ul =document.getElementById("List-Container")
+                var input = document.getElementById("input-box")
+                function add()
+                {
+                    var listitem =document.createElement("li")
+                    listitem.innerHTML= input.value +"<button class='dl' onclick='Delete(event)'>Delete</button>"
+                    ul.append(listitem)
+                }
+                function Delete(event)
+                {
+                    event.target.parentElement.remove()
+                }
+                
+                function clear()
+                {
+                    
+                }
+
+                
+            </script>
+        </div>
+
+    </div>
+</body>
+</html>
